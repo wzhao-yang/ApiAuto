@@ -42,7 +42,11 @@ class HandExcel:
         return row_list
 
 
+# 编写一个单例
+excel_data = HandExcel()
+
 if __name__ == "__main__":
     handle = HandExcel()
     print(handle.get_cell_value(2, 5))
     print(handle.get_rows_value(2))  # 打印第2行内所有内容
+    print(excel_data)
