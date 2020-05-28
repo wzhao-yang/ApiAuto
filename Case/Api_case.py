@@ -8,9 +8,11 @@ def read_json():
         data = json.load(f)
     return data
 
+
 def get_value(key):
     data = read_json()
     return data[key]
+
 
 if __name__ == '__main__':
     read_json()
