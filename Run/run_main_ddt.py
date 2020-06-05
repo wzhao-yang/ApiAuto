@@ -2,33 +2,34 @@
 # 导入handle_excel，拿到excel的数据
 from __future__ import unicode_literals
 
-import ast
 import json
 import os
 import sys
-
+import HTMLTestRunner
+import ddt
+import unittest
 from Base.base_request import request
 from Util.handle_cookie import get_cookie_value
-from Util.handle_header import get_header
 from Util.handle_excel import excel_data
-from Util.codition_data import get_data
-from Util.handle_init import handle_ini
-from Util.handle_result import handle_result, handle_result_json, get_result_json, get_value
-
+from Util.handle_header import get_header
+from Util.handle_result import handle_result, handle_result_json, get_value
 
 base_path = os.getcwd()
 sys.path.append(base_path)
 
+data = excel_data.get_excel_data()
+
 
 # 执行测试用例
+@ddt.ddt
 class RunMain:
+    @ddt.data(*data)
     def run_case(self):
         rows = excel_data.get_rows()  # 获取excel中所有行数
         for i in range(rows):  # 循环遍历rows
             cookie = None
-            get_cookie =None
-            header =None
-            depend_data = None
+            get_cookie = None
+            header = None
             # header = handle_ini.get_value("header") # 不从配置文件中拿header
             # headers = eval(header)
             # headers = json.loads(header)
@@ -40,9 +41,6 @@ class RunMain:
                 print(case_id + '--------------->第{}个执行完毕'.format(i + 1))
 
                 # method = handle_ini.get_value('method')
-                is_depend = data[3]
-                if is_depend:
-                    depend_data = get_data(is_depend)  # 获取依赖数据
 
                 url = data[3]  # 获取URL
                 method = data[4]  # 获取method名
@@ -51,7 +49,7 @@ class RunMain:
                 excepect_result = data[8]  # 预期结果
                 cookie_method = data[6]  # 是否需要携带cookie
                 is_header = data[11]  # 获取是否需要携带header
-                # precondition = data[1]  #  获取前置条件
+                precondition = data[1]  # 获取前置条件
                 # if precondition:
                 #     pass
                 if cookie_method == 'yes':
@@ -110,6 +108,18 @@ class RunMain:
                         print(case_id, "case测试失败", res)
 
 
+def add_case():
+    case_path = os.path.join("Run")
+    discover = unittest.defaultTestLoader.discover(case_path, pattern='run_main_ddt.py')
+    return discover
+
+
 if __name__ == "__main__":
-    run = RunMain()
-    run.run_case()
+    suite = unittest.TestSuite()
+    suite.addTest(add_case())
+    file_path = '../Report/111kkkak.html'
+    with open(file_path,'wb') as f:
+        runner = HTMLTestRunner.HTMLTestRunner(stream=f,title="测试执行情况",description="接口自动化测试报告")
+        runner.run(suite)
+    f.close()
+    # unittest.main()

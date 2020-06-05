@@ -6,12 +6,13 @@ import sys
 base_path = os.getcwd()
 sys.path.append(base_path)
 
+"""
+获取配置文件方法，便于管理
+"""
+
 
 class HandleInit:
-    """
-    获取配置文件方法，便于管理
-    """
-
+    # 定义load方法，加载文件
     def load_ini(self):
         file_path = "../Config/server.ini"
         cf = configparser.ConfigParser()
@@ -21,7 +22,7 @@ class HandleInit:
     # 获取ini里的value值
     def get_value(self, key, node=None):
 
-        if node == None:
+        if node is None:
             node = 'server'
         # print(node)
         cf = self.load_ini()
@@ -35,8 +36,7 @@ class HandleInit:
 
 
 handle_ini = HandleInit()
-# 测试获取某个值
+
 if __name__ == '__main__':
     hi = HandleInit()
-    print(hi.get_value("host"))
-
+    print("测试获取host得值：", hi.get_value("host"))

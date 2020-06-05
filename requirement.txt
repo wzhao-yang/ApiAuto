@@ -2,3 +2,5 @@ json
 requests
 openpyxl
 ConfigParser
+deepdiff
+jsonpath_rw

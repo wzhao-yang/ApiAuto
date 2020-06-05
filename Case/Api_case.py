@@ -1,7 +1,5 @@
 import json
-import mock
-import HTMLTestRunner
-from Base.base_request import request
+
 
 def read_json():
     with open("../Config/user_data.json") as f:
@@ -15,4 +13,5 @@ def get_value(key):
 
 
 if __name__ == '__main__':
-    read_json()
+    data = read_json()
+    print(data)
