@@ -34,7 +34,8 @@ def get_depend_data(res_data, key):
     :param key:
     :return:
     """
-    # res_data = json.loads(res_data)
+    res_data = json.loads(res_data)
+
     json_exe = parse(key)
     madle = json_exe.find(res_data)  # 查找数据
     return [math.value for math in madle][0]

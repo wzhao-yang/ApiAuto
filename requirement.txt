@@ -4,3 +4,5 @@ openpyxl
 ConfigParser
 deepdiff
 jsonpath_rw
+pytest
+pytest-allure-adaptor

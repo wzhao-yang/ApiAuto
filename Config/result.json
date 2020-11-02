@@ -1,0 +1,139 @@
+{
+  "api/v1/login/loginWithSms": [
+    {
+      "resultCode": 2000,
+      "errMsg": null,
+      "content": {
+        "userId": 1916250
+      }
+    }
+  ],
+  "api/v1/goods/getGoodsDetail/18404": [
+    {
+      "resultCode": 2000,
+      "errMsg": null,
+      "content": {
+        "goodsId": 18404,
+        "code": "131360118404",
+        "supplierId": 6,
+        "model": "11317001",
+        "title": "Apple iPhone XS 双卡双待 智能手机【预定】",
+        "picPath": "https://img.gouta.cn/2d3bdd6a-f6e7-4f1c-8211-6e7ab06deace",
+        "sellPoint": null,
+        "price": 100.000000,
+        "salePrice": 100.000000,
+        "num": 47,
+        "image": [
+          "https://img.gouta.cn/272a08c3-505a-429e-81a2-2b534e8e3c3b",
+          "https://img.gouta.cn/a6fd9975-5596-441c-9b0f-d8446d3572e2",
+          "https://img.gouta.cn/16564c12-3482-4f8a-9516-a8ae95a474f6",
+          "https://img.gouta.cn/2e3200d6-d4a2-4dbf-9dd2-a02b34285525"
+        ],
+        "categoryId": 1,
+        "categoryLeafId": 3,
+        "brandCategoryId": 1,
+        "status": 1,
+        "weight": null,
+        "color": null,
+        "size": null,
+        "fqPrice": 8.330000,
+        "activityType": null,
+        "goodsDesc": {
+          "goodsIntroduction": "<p><img src=\"https://img.gouta.cn/676305ae-378d-4c21-b682-f03fed3d7588\" /><img src=\"https://img.gouta.cn/49f11f9f-98fc-494f-9f75-ae68d955f6cb\" /><img src=\"https://img.gouta.cn/34c25f99-f675-4423-b2ed-c000a61cefd9\" /><img src=\"https://img.gouta.cn/c808a402-3702-4a92-99be-0f1b2420b309\" /><img src=\"https://img.gouta.cn/04f8fd3d-cab3-44e5-a293-50a6cf2536f7\" /><img src=\"https://img.gouta.cn/d90a0f01-ba32-4988-af73-94de202010a5\" /><img src=\"https://img.gouta.cn/adc08046-b8b9-4631-88c2-832284ee4e6f\" /><img src=\"https://img.gouta.cn/9459bf71-04e9-421d-9964-b03c24ddd88e\" /><img src=\"https://img.gouta.cn/6117608f-1259-43fd-ae5e-c81ea96a81c5\" /><img src=\"https://img.gouta.cn/5eabccee-91f1-4e8b-870d-af2297a42add\" /><img src=\"https://img.gouta.cn/8c770cb8-5ebc-4b46-94ec-a25545c41a79\" /></p>",
+          "goodsParams": " ",
+          "customerService": " "
+        },
+        "attrList": [
+          {
+            "attrCategoryId": 1,
+            "attrId": 1308,
+            "attrName": "金色",
+            "attrUrl": "https://img.gouta.cn/2d3bdd6a-f6e7-4f1c-8211-6e7ab06deace"
+          }
+        ],
+        "shareDesc": "Apple iPhone XS 双卡双待 智能手机【预定】",
+        "adSlogan": "9月21日起正式陆续发货",
+        "newProduct": false,
+        "hasCutActivity": false,
+        "cutActivityInfo": null,
+        "hasGroupActivity": false,
+        "groupActivityResponse": null,
+        "whiteList": true,
+        "goodsLabels": [],
+        "brandUrl": "https://img.gouta.cn/51f7d348-1b3b-485d-8f8a-457931346e84",
+        "brandName": "苹果",
+        "price3": 33.330000,
+        "price6": 16.670000,
+        "price12": 8.330000,
+        "isIntereFree": false,
+        "supplierName": "深圳市易道时代科技有限公司",
+        "saleCnt": 5
+      }
+    }
+  ],
+  "api/v1/order/submitOrder": [
+    {
+      "resultCode": 2000,
+      "errMsg": null,
+      "content": {
+        "orderId": 146632,
+        "orderNo": null,
+        "status": null,
+        "title": null,
+        "subtitle": null,
+        "price": null,
+        "totalFee": 100.000000,
+        "originalPrice": null,
+        "picPath": null,
+        "color": null,
+        "goodsSize": null,
+        "orderType": null,
+        "fqStatus": null,
+        "attrList": null,
+        "paymentType": null,
+        "cashPaymentType": null,
+        "orderCreateTime": null,
+        "isIntereFree": null,
+        "isPreRepay": null,
+        "preRepayBusinessId": null
+      }
+    }
+  ],
+  "api/v1/order/myOrderList?": [
+    {
+      "resultCode": 2000,
+      "errMsg": null,
+      "content": [
+        {
+          "orderId": 146631,
+          "orderNo": "200558728226",
+          "status": 6,
+          "title": "Apple iPhone XS 双卡双待 智能手机【预定】",
+          "subtitle": null,
+          "price": 100.000000,
+          "totalFee": 100.000000,
+          "originalPrice": null,
+          "picPath": "https://img.gouta.cn/2d3bdd6a-f6e7-4f1c-8211-6e7ab06deace",
+          "color": null,
+          "goodsSize": null,
+          "orderType": 3,
+          "fqStatus": null,
+          "attrList": [
+            {
+              "attrCategoryId": 1,
+              "attrId": 1308,
+              "attrName": "金色",
+              "attrUrl": "https://img.gouta.cn/2d3bdd6a-f6e7-4f1c-8211-6e7ab06deace"
+            }
+          ],
+          "paymentType": 2,
+          "cashPaymentType": 3,
+          "orderCreateTime": null,
+          "isIntereFree": null,
+          "isPreRepay": null,
+          "preRepayBusinessId": null
+        }
+      ]
+    }
+  ]
+}
